@@ -1,0 +1,12 @@
+Arranque anterior: b9d6c39f-baf9-446b-934b-3b45bcf4b241
+Arranque nuevo: 9e8bbc42-4fc5-4aa6-b89d-3f39fb265f1b
+
+prueba-iaas.txt: OK
+prueba-persistencia.bin: OK
+TARGET SOURCE    FSTYPE OPTIONS
+/datos /dev/sda1 ext4   rw,relatime
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4   32G  1.1M   30G   1% /datos
+Práctica IaaS: disco administrado adicional de 32 GiB.
+Montaje persistente: /datos.
+Creado el: 2026-09-22T23:36:25+00:00

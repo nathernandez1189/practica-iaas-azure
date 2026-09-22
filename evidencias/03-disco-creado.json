@@ -1,0 +1,30 @@
+{
+  "creationData": {
+    "createOption": "Empty"
+  },
+  "diskIOPSReadWrite": 500,
+  "diskMBpsReadWrite": 60,
+  "diskSizeBytes": 34359738368,
+  "diskSizeGB": 32,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/disks/disco-datos-iaas",
+  "location": "chilecentral",
+  "name": "disco-datos-iaas",
+  "networkAccessPolicy": "AllowAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "rg-practica-iaas",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "tags": {
+    "practica": "iaas"
+  },
+  "timeCreated": "2026-09-22T23:29:05.9350035+00:00",
+  "type": "Microsoft.Compute/disks",
+  "uniqueId": "<REDACTED>"
+}

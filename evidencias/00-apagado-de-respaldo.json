@@ -1,0 +1,4 @@
+{
+  "configurado": false,
+  "motivo": "Microsoft.DevTestLab/schedules no está disponible en chilecentral y exige la misma región de la VM. Se verificará la desasignación directa al terminar."
+}

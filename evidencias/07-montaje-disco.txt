@@ -1,0 +1,44 @@
+Disco nuevo confirmado: /dev/sdb; LUN 0; 32 GiB.
+Discarding device blocks:       0/838809              done                            
+Creating filesystem with 8388096 4k blocks and 2097152 inodes
+Filesystem UUID: ef492f4a-1423-404e-98e1-6cc1392162b1
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624
+
+Allocating group tables:   0/25      done                            
+Writing inode tables:   0/25      done                            
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information:   0/25      done
+
+Success, no errors or warnings detected
+prueba-iaas.txt: OK
+prueba-persistencia.bin: OK
+
+--- Montaje verificado ---
+TARGET SOURCE    FSTYPE OPTIONS
+/datos /dev/sdb1 ext4   rw,relatime
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sdb1      ext4   32G  1.1M   30G   1% /datos
+
+--- Discos ---
+NAME    HCTL         SIZE FSTYPE   MOUNTPOINTS
+loop0                 74M squashfs /snap/core22/2411
+loop1              115.3M squashfs /snap/lxd/40338
+loop2               50.1M squashfs /snap/snapd/27591
+sda     0:0:0:0       32G          
+├─sda1              31.9G ext4     /
+├─sda14                4M          
+└─sda15              106M vfat     /boot/efi
+sdb     1:0:0:0       32G          
+└─sdb1                32G ext4     /datos
+
+--- Configuración persistente ---
+UUID=ef492f4a-1423-404e-98e1-6cc1392162b1 /datos ext4 defaults,nofail 0 2
+
+--- Archivos de prueba ---
+total 1.1M
+-rw-rw-r-- 1 azureuser azureuser  172 Sep 22 23:36 SHA256SUMS
+drwx------ 2 root      root       16K Sep 22 23:36 lost+found
+-rw-rw-r-- 1 azureuser azureuser  122 Sep 22 23:36 prueba-iaas.txt
+-rw-rw-r-- 1 azureuser azureuser 1.0M Sep 22 23:36 prueba-persistencia.bin

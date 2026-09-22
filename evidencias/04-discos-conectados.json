@@ -1,0 +1,35 @@
+{
+  "dataDisks": [
+    {
+      "caching": "None",
+      "createOption": "Attach",
+      "deleteOption": "Detach",
+      "lun": 0,
+      "managedDisk": {
+        "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/disks/disco-datos-iaas",
+        "resourceGroup": "rg-practica-iaas"
+      },
+      "name": "disco-datos-iaas",
+      "toBeDetached": false
+    }
+  ],
+  "diskControllerType": "SCSI",
+  "imageReference": {
+    "exactVersion": "22.04.202608060",
+    "offer": "0001-com-ubuntu-server-jammy",
+    "publisher": "Canonical",
+    "sku": "22_04-lts-gen2",
+    "version": "22.04.202608060"
+  },
+  "osDisk": {
+    "caching": "ReadWrite",
+    "createOption": "FromImage",
+    "deleteOption": "Detach",
+    "managedDisk": {
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/disks/disco-so-ubuntu-iaas",
+      "resourceGroup": "rg-practica-iaas"
+    },
+    "name": "disco-so-ubuntu-iaas",
+    "osType": "Linux"
+  }
+}

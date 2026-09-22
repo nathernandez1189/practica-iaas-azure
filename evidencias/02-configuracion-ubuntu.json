@@ -1,0 +1,94 @@
+{
+  "diagnosticsProfile": {
+    "bootDiagnostics": {
+      "enabled": true
+    }
+  },
+  "etag": "<REDACTED>",
+  "fqdns": "",
+  "hardwareProfile": {
+    "vmSize": "Standard_B2als_v2"
+  },
+  "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/virtualMachines/vm-ubuntu-iaas",
+  "location": "chilecentral",
+  "macAddresses": "<REDACTED>",
+  "name": "vm-ubuntu-iaas",
+  "networkProfile": {
+    "networkInterfaces": [
+      {
+        "deleteOption": "Detach",
+        "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Network/networkInterfaces/nic-ubuntu-iaas",
+        "primary": true,
+        "resourceGroup": "rg-practica-iaas"
+      }
+    ]
+  },
+  "osProfile": {
+    "adminUsername": "azureuser",
+    "allowExtensionOperations": true,
+    "computerName": "vm-ubuntu-iaas",
+    "linuxConfiguration": {
+      "disablePasswordAuthentication": true,
+      "enableVMAgentPlatformUpdates": true,
+      "patchSettings": {
+        "assessmentMode": "ImageDefault",
+        "patchMode": "ImageDefault"
+      },
+      "provisionVMAgent": true,
+      "ssh": {
+        "publicKeys": [
+          {
+            "keyData": "<REDACTED>",
+            "path": "/home/azureuser/.ssh/authorized_keys"
+          }
+        ]
+      }
+    },
+    "requireGuestProvisionSignal": true,
+    "secrets": []
+  },
+  "powerState": "VM running",
+  "privateIps": "10.42.1.4",
+  "provisioningState": "Succeeded",
+  "publicIps": "<VM_PUBLIC_IP>",
+  "resourceGroup": "rg-practica-iaas",
+  "securityProfile": {
+    "securityType": "TrustedLaunch",
+    "uefiSettings": {
+      "secureBootEnabled": true,
+      "vTpmEnabled": true
+    }
+  },
+  "storageProfile": {
+    "dataDisks": [],
+    "diskControllerType": "SCSI",
+    "imageReference": {
+      "exactVersion": "22.04.202608060",
+      "offer": "0001-com-ubuntu-server-jammy",
+      "publisher": "Canonical",
+      "sku": "22_04-lts-gen2",
+      "version": "22.04.202608060"
+    },
+    "osDisk": {
+      "caching": "ReadWrite",
+      "createOption": "FromImage",
+      "deleteOption": "Detach",
+      "diskSizeGB": 32,
+      "managedDisk": {
+        "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/disks/disco-so-ubuntu-iaas",
+        "resourceGroup": "rg-practica-iaas",
+        "storageAccountType": "Standard_LRS"
+      },
+      "name": "disco-so-ubuntu-iaas",
+      "osType": "Linux"
+    }
+  },
+  "tags": {
+    "practica": "iaas",
+    "proposito": "Ubuntu y disco adicional",
+    "sesion": "2026-09-22"
+  },
+  "timeCreated": "2026-09-22T23:11:11.068308+00:00",
+  "type": "Microsoft.Compute/virtualMachines",
+  "vmId": "<REDACTED>"
+}

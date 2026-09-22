@@ -1,0 +1,10 @@
+{
+  "value": [
+    {
+      "code": "ProvisioningState/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "Enable succeeded: \n[stdout]\nssh-ed25519 <SSH_PUBLIC_KEY>\nNAME    HCTL         SIZE FSTYPE   MOUNTPOINTS\nloop0                 74M squashfs /snap/core22/2411\nloop1              115.3M squashfs /snap/lxd/40338\nloop2               50.1M squashfs /snap/snapd/27591\nsda     1:0:0:0       32G          \nsdb     0:0:0:0       32G          \n├─sdb1              31.9G ext4     /\n├─sdb14                4M          \n└─sdb15              106M vfat     /boot/efi\n/dev/sda\n\n[stderr]\n"
+    }
+  ]
+}

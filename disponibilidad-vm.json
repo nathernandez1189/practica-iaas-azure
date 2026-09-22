@@ -1,0 +1,141 @@
+[
+  {
+    "region": "canadacentral",
+    "candidates": []
+  },
+  {
+    "region": "westus",
+    "candidates": [
+      {
+        "size": "Standard_D2as_v6",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V2",
+        "restrictions": []
+      }
+    ]
+  },
+  {
+    "region": "chilecentral",
+    "candidates": [
+      {
+        "size": "Standard_B2als_v2",
+        "vCPUs": "2",
+        "memoryGB": "4",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_B2as_v2",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_B2ls_v2",
+        "vCPUs": "2",
+        "memoryGB": "4",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_B2s_v2",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_D2as_v5",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_D2as_v6",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_D2s_v5",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_DS1_v2",
+        "vCPUs": "1",
+        "memoryGB": "3.5",
+        "generations": "V1,V2",
+        "restrictions": []
+      }
+    ]
+  },
+  {
+    "region": "brazilsouth",
+    "candidates": [
+      {
+        "size": "Standard_D2as_v6",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V2",
+        "restrictions": [
+          {
+            "type": "Zone",
+            "values": [
+              "brazilsouth"
+            ],
+            "restrictionInfo": {
+              "locations": [
+                "brazilsouth"
+              ],
+              "zones": [
+                "1",
+                "3"
+              ]
+            },
+            "reasonCode": "NotAvailableForSubscription"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "northcentralus",
+    "candidates": [
+      {
+        "size": "Standard_B2als_v2",
+        "vCPUs": "2",
+        "memoryGB": "4",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_B2as_v2",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_D2as_v5",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V1,V2",
+        "restrictions": []
+      },
+      {
+        "size": "Standard_D2as_v6",
+        "vCPUs": "2",
+        "memoryGB": "8",
+        "generations": "V2",
+        "restrictions": []
+      }
+    ]
+  }
+]

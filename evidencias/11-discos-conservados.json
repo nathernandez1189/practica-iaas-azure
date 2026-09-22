@@ -1,0 +1,18 @@
+[
+  {
+    "name": "disco-datos-iaas",
+    "sizeGB": 32,
+    "sku": "Standard_LRS",
+    "state": "Reserved",
+    "managedBy": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/virtualMachines/vm-ubuntu-iaas",
+    "provisioningState": "Succeeded"
+  },
+  {
+    "name": "disco-so-ubuntu-iaas",
+    "sizeGB": 32,
+    "sku": "Standard_LRS",
+    "state": "Reserved",
+    "managedBy": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Compute/virtualMachines/vm-ubuntu-iaas",
+    "provisioningState": "Succeeded"
+  }
+]

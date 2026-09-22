@@ -1,0 +1,17 @@
+azureuser
+vm-ubuntu-iaas
+Ubuntu 22.04.5 LTS
+x86_64
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       251Mi       3.2Gi       3.0Mi       324Mi       3.3Gi
+Swap:             0B          0B          0B
+NAME    HCTL         SIZE FSTYPE   MOUNTPOINTS
+loop0                 74M squashfs /snap/core22/2411
+loop1              115.3M squashfs /snap/lxd/40338
+loop2               50.1M squashfs /snap/snapd/27591
+sda     0:0:0:0       32G          
+├─sda1              31.9G ext4     /
+├─sda14                4M          
+└─sda15              106M vfat     /boot/efi
+sdb     1:0:0:0       32G          
+/usr/sbin/parted

@@ -1,0 +1,11 @@
+{
+  "sourceAddressPrefix": "<CLIENT_PUBLIC_IP>/32",
+  "destinationPortRange": "22",
+  "conexion": "SSH autenticada",
+  "direccionesObservadas": [
+    "<CLIENT_PUBLIC_IP>",
+    "<CLIENT_PUBLIC_IP>",
+    "<CLIENT_PUBLIC_IP>",
+    "<CLIENT_PUBLIC_IP>"
+  ]
+}

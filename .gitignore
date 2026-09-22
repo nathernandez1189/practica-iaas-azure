@@ -1,0 +1,22 @@
+# Accesos y respaldos locales
+privado/
+private/
+.azure/
+.kube/
+.env
+.env.*
+config.local.json
+*.pem
+*.key
+*_rsa
+*_rsa.pub
+known_hosts
+
+# Nuevas evidencias pueden contener identificadores y direcciones reales
+resultados-locales/
+
+# Archivos temporales
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/

@@ -1,0 +1,7 @@
+{
+  "estado": "correcto",
+  "sha256": {
+    "prueba-iaas.txt": "2b7ee6fb96d71878ead8be94d9030ab876057eb52bc944219ad10c3d68218977",
+    "prueba-persistencia.bin": "728c68f1b8847282fc41a71dfce388e91e267ffb3c7294a1da4c9e2fa8d9cb41"
+  }
+}

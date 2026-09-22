@@ -1,0 +1,25 @@
+{
+  "name": "nsg-ubuntu-iaas",
+  "securityRules": [
+    {
+      "access": "Allow",
+      "destinationAddressPrefix": "*",
+      "destinationAddressPrefixes": [],
+      "destinationPortRange": "22",
+      "destinationPortRanges": [],
+      "direction": "Inbound",
+      "etag": "<REDACTED>",
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-practica-iaas/providers/Microsoft.Network/networkSecurityGroups/nsg-ubuntu-iaas/securityRules/SSH-desde-mi-conexion",
+      "name": "SSH-desde-mi-conexion",
+      "priority": 1000,
+      "protocol": "Tcp",
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-practica-iaas",
+      "sourceAddressPrefix": "<CLIENT_PUBLIC_IP>/32",
+      "sourceAddressPrefixes": [],
+      "sourcePortRange": "*",
+      "sourcePortRanges": [],
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+    }
+  ]
+}
