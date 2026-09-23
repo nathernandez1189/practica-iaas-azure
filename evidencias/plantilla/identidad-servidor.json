@@ -1,0 +1,10 @@
+{
+  "value": [
+    {
+      "code": "ProvisioningState/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "Enable succeeded: \n[stdout]\n<SSH_PUBLIC_KEY>\nvm-plantilla-iaas\nUbuntu 22.04.5 LTS\n\n[stderr]\n"
+    }
+  ]
+}

@@ -104,11 +104,11 @@ Las evidencias publicadas son copias con identificadores y direcciones de acceso
 
 El respaldo está en `privado/respaldo-datos`. En la VM, la configuración original de montajes se conserva como `/etc/fstab.antes-practica-iaas`.
 
-## Alcance que queda pendiente
+## Alcance actual de la práctica
 
-Esta ejecución cubre la creación y acceso a Ubuntu y el disco adicional. No se ha revisado paso a paso el contenido del video del curso, por lo que no se afirma haber reproducido todos sus detalles. Los puntos de elegir una plantilla del catálogo de Azure y desplegar una VM desde ella, y crear Windows y conectarse por RDP, quedan pendientes. El despliegue técnico de Ubuntu usó una definición ARM propia; no sustituye la selección y explicación de una plantilla del catálogo solicitada por el ejercicio.
+Los puntos de plantilla del catálogo y Windows con RDP se completaron después de la validación de Ubuntu y el disco. Consulta la [guía completa](Guia-completa-sustentacion.md), la [explicación de la plantilla](Plantilla-del-catalogo.md) y la [demostración Windows/RDP](Windows-y-RDP.md).
 
-No se ha enviado ni presentado la práctica ante el docente.
+Se comprobaron los cuatro componentes técnicos. No se afirma haber reproducido cada detalle del video del curso ni haber presentado la práctica ante el docente.
 
 ## Referencias
 

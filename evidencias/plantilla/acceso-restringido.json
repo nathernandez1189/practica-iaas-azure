@@ -1,0 +1,24 @@
+{
+  "access": "Allow",
+  "destinationAddressPrefix": "*",
+  "destinationAddressPrefixes": [],
+  "destinationPortRange": "22",
+  "destinationPortRanges": [],
+  "direction": "Inbound",
+  "etag": "<REDACTED>",
+  "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Network/networkSecurityGroups/nsg-plantilla-iaas/securityRules/SSH",
+  "name": "SSH",
+  "priority": 1000,
+  "protocol": "Tcp",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "rg-iaas-plantilla",
+  "sourceAddressPrefixes": [
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32"
+  ],
+  "sourcePortRange": "*",
+  "sourcePortRanges": [],
+  "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "despliegue-plantilla",
+  "state": "Succeeded",
+  "timestamp": "2026-09-23T00:01:41.087978+00:00",
+  "template": "catalogo-linux.adaptada.json",
+  "resources": [
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Compute/virtualMachines/vm-plantilla-iaas",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Compute/virtualMachines"
+    },
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Compute/virtualMachines/vm-plantilla-iaas/extensions/GuestAttestation",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+    },
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Network/networkInterfaces/vm-plantilla-iaasNetInt",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Network/networkInterfaces"
+    },
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Network/networkSecurityGroups/nsg-plantilla-iaas",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Network/networkSecurityGroups"
+    },
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Network/publicIPAddresses/vm-plantilla-iaasPublicIP",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Network/publicIPAddresses"
+    },
+    {
+      "apiVersion": null,
+      "extension": null,
+      "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Network/virtualNetworks/vnet-plantilla-iaas",
+      "identifiers": null,
+      "resourceGroup": "rg-iaas-plantilla",
+      "resourceType": "Microsoft.Network/virtualNetworks"
+    }
+  ]
+}

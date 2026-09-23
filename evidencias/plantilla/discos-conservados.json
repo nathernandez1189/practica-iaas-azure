@@ -1,0 +1,10 @@
+[
+  {
+    "managedBy": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-plantilla/providers/Microsoft.Compute/virtualMachines/vm-plantilla-iaas",
+    "name": "vm-plantilla-iaas_OsDisk_1_a2634bccf0044d489416a7269bdbaf33",
+    "provisioningState": "Succeeded",
+    "sizeGB": 32,
+    "sku": "Standard_LRS",
+    "state": "Reserved"
+  }
+]

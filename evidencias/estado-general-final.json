@@ -1,0 +1,61 @@
+{
+  "fechaUtc": "2026-09-23T01:21:46.868729+00:00",
+  "maquinas": [
+    {
+      "estado": "VM deallocated",
+      "grupo": "RG-IAAS-WINDOWS",
+      "nombre": "vm-win-iaas",
+      "region": "northcentralus",
+      "tamano": "Standard_B2als_v2"
+    },
+    {
+      "estado": "VM deallocated",
+      "grupo": "RG-IAAS-PLANTILLA",
+      "nombre": "vm-plantilla-iaas",
+      "region": "chilecentral",
+      "tamano": "Standard_B2als_v2"
+    },
+    {
+      "estado": "VM deallocated",
+      "grupo": "RG-PRACTICA-IAAS",
+      "nombre": "vm-ubuntu-iaas",
+      "region": "chilecentral",
+      "tamano": "Standard_B2als_v2"
+    }
+  ],
+  "discos": [
+    {
+      "aprovisionamiento": "Succeeded",
+      "estado": "Reserved",
+      "nombre": "disco-datos-iaas",
+      "tamanoGiB": 32,
+      "tipo": "Standard_LRS",
+      "grupo": "rg-practica-iaas"
+    },
+    {
+      "aprovisionamiento": "Succeeded",
+      "estado": "Reserved",
+      "nombre": "disco-so-ubuntu-iaas",
+      "tamanoGiB": 32,
+      "tipo": "Standard_LRS",
+      "grupo": "rg-practica-iaas"
+    },
+    {
+      "aprovisionamiento": "Succeeded",
+      "estado": "Reserved",
+      "nombre": "vm-plantilla-iaas_OsDisk_1_a2634bccf0044d489416a7269bdbaf33",
+      "tamanoGiB": 32,
+      "tipo": "Standard_LRS",
+      "grupo": "rg-iaas-plantilla"
+    },
+    {
+      "aprovisionamiento": "Succeeded",
+      "estado": "Reserved",
+      "nombre": "disco-so-windows-iaas",
+      "tamanoGiB": 32,
+      "tipo": "Standard_LRS",
+      "grupo": "rg-iaas-windows"
+    }
+  ],
+  "validacion": "Tres VM desasignadas y cuatro discos de 32 GiB conservados."
+}

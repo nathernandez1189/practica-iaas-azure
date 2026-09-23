@@ -25,3 +25,15 @@ Se sustituyeron por marcadores el ID de suscripción, las IP públicas de la VM 
 Los marcadores `<SUBSCRIPTION_ID>`, `<VM_PUBLIC_IP>`, `<CLIENT_PUBLIC_IP>`, `<SSH_PUBLIC_KEY>` y `<REDACTED>` no son valores utilizables para operar Azure. Se conservaron nombres de recursos, fechas, tamaños, estados, configuración de seguridad, UUID del sistema de archivos e identificadores de arranque necesarios para entender las pruebas, así como los SHA256 de los archivos de prueba.
 
 Los originales permanecen en el equipo de la estudiante. Los PDF en `referencias/` son el material del curso proporcionado para esta práctica; no son evidencias de ejecución.
+
+## Nuevas partes completadas
+
+Las carpetas `plantilla/` y `windows/` contienen el despliegue, la conexión y la desasignación de las otras dos máquinas. Sus marcas de tiempo UTC pueden indicar el 23 de septiembre; corresponden a la noche del 22 de septiembre en Colombia.
+
+- [Plantilla: resumen](plantilla/resumen.json).
+- [Plantilla: conexión SSH](plantilla/conexion-ssh.txt).
+- [Windows: resumen](windows/resumen.json).
+- [Windows: registro RDP](windows/sesion-rdp.json).
+- [Windows: evidencia visual local](windows/evidencia-visual.json).
+
+Las nuevas copias utilizan también el marcador `<PUBLIC_IP>`. La captura de escritorio queda únicamente en el equipo original porque la barra de título contiene la IP de conexión. Ningún archivo RDP ni credencial se publica.

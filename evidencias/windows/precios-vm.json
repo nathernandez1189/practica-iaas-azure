@@ -1,0 +1,30 @@
+[
+  {
+    "productName": "Virtual Machines Basv2 Series",
+    "skuName": "B2als v2",
+    "retailPrice": 0.0526,
+    "unitOfMeasure": "1 Hour",
+    "currencyCode": "USD"
+  },
+  {
+    "productName": "Virtual Machines Basv2 Series",
+    "skuName": "B2als v2 Spot",
+    "retailPrice": 0.033022,
+    "unitOfMeasure": "1 Hour",
+    "currencyCode": "USD"
+  },
+  {
+    "productName": "Virtual Machines Basv2 Series Windows",
+    "skuName": "B2als v2",
+    "retailPrice": 0.0618,
+    "unitOfMeasure": "1 Hour",
+    "currencyCode": "USD"
+  },
+  {
+    "productName": "Virtual Machines Basv2 Series Windows",
+    "skuName": "B2als v2 Spot",
+    "retailPrice": 0.038798,
+    "unitOfMeasure": "1 Hour",
+    "currencyCode": "USD"
+  }
+]

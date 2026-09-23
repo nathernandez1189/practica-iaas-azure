@@ -1,0 +1,10 @@
+{
+  "parte": 3,
+  "fechaUtc": "2026-09-23T00:27:04.283386+00:00",
+  "vm": "vm-plantilla-iaas",
+  "grupo": "rg-iaas-plantilla",
+  "catalogo": "https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vm-simple-linux/",
+  "ssh": "correcto",
+  "estado": "completado",
+  "estadoFinal": "VM deallocated"
+}

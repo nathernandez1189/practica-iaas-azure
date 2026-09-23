@@ -1,0 +1,83 @@
+{
+  "diagnosticsProfile": {
+    "bootDiagnostics": {
+      "enabled": true
+    }
+  },
+  "etag": "<REDACTED>",
+  "fqdns": "",
+  "hardwareProfile": {
+    "vmSize": "Standard_B2als_v2"
+  },
+  "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-windows/providers/Microsoft.Compute/virtualMachines/vm-win-iaas",
+  "location": "northcentralus",
+  "macAddresses": "<REDACTED>",
+  "name": "vm-win-iaas",
+  "networkProfile": {
+    "networkInterfaces": [
+      {
+        "deleteOption": "Detach",
+        "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-windows/providers/Microsoft.Network/networkInterfaces/nic-windows-iaas",
+        "primary": true,
+        "resourceGroup": "rg-iaas-windows"
+      }
+    ]
+  },
+  "osProfile": {
+    "adminUsername": "azureuser",
+    "allowExtensionOperations": true,
+    "computerName": "vm-win-iaas",
+    "requireGuestProvisionSignal": true,
+    "secrets": [],
+    "windowsConfiguration": {
+      "enableAutomaticUpdates": true,
+      "enableVMAgentPlatformUpdates": true,
+      "patchSettings": {
+        "assessmentMode": "ImageDefault",
+        "patchMode": "AutomaticByOS"
+      },
+      "provisionVMAgent": true
+    }
+  },
+  "powerState": "VM deallocated",
+  "privateIps": "10.44.1.4",
+  "provisioningState": "Succeeded",
+  "publicIps": "<PUBLIC_IP>",
+  "resourceGroup": "rg-iaas-windows",
+  "securityProfile": {
+    "securityType": "TrustedLaunch",
+    "uefiSettings": {
+      "secureBootEnabled": true,
+      "vTpmEnabled": true
+    }
+  },
+  "storageProfile": {
+    "dataDisks": [],
+    "diskControllerType": "SCSI",
+    "imageReference": {
+      "exactVersion": "20348.5622.260906",
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2022-datacenter-smalldisk-g2",
+      "version": "20348.5622.260906"
+    },
+    "osDisk": {
+      "caching": "ReadWrite",
+      "createOption": "FromImage",
+      "deleteOption": "Detach",
+      "managedDisk": {
+        "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-windows/providers/Microsoft.Compute/disks/disco-so-windows-iaas",
+        "resourceGroup": "rg-iaas-windows"
+      },
+      "name": "disco-so-windows-iaas",
+      "osType": "Windows"
+    }
+  },
+  "tags": {
+    "parte": "windows",
+    "practica": "iaas"
+  },
+  "timeCreated": "2026-09-23T00:28:59.7130801+00:00",
+  "type": "Microsoft.Compute/virtualMachines",
+  "vmId": "<REDACTED>"
+}

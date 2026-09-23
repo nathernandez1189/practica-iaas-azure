@@ -1,0 +1,16 @@
+{
+  "value": [
+    {
+      "code": "ComponentStatus/StdOut/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "{\n    \"fechaUtc\":  \"2026-09-23T00:32:07.1880496Z\",\n    \"nombre\":  \"vm-win-iaas\",\n    \"sistemaOperativo\":  \"Microsoft Windows Server 2022 Datacenter\",\n    \"version\":  \"10.0.20348\",\n    \"arquitectura\":  \"64-bit\",\n    \"procesadores\":  2,\n    \"memoriaGiB\":  3.95,\n    \"servicioRDP\":  \"Running\",\n    \"puerto3389\":  true,\n    \"rdpHabilitado\":  true,\n    \"autenticacionNivelRed\":  1,\n    \"certificadoSHA1\":  \"02B16029F45BD618739CCA8861DCEE781FCEB53F\",\n    \"certificadoSHA256\":  \"D2CB339605D8E58BF510609144E5312D1836A39FD50B163154291A63D851DF57\"\n}"
+    },
+    {
+      "code": "ComponentStatus/StdErr/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": ""
+    }
+  ]
+}

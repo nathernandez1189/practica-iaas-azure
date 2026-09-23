@@ -1,0 +1,11 @@
+{
+  "parte": 4,
+  "fechaUtc": "2026-09-23T00:37:38.526785+00:00",
+  "vm": "vm-win-iaas",
+  "grupo": "rg-iaas-windows",
+  "region": "northcentralus",
+  "rdp": "correcto: sesión remota interactiva, evento 4624 tipo 10",
+  "estado": "completado",
+  "cliente": "Windows App para macOS",
+  "estadoFinal": "VM deallocated"
+}

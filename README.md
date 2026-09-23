@@ -1,104 +1,55 @@
 # Práctica IaaS en Azure
 
-Implementación académica de una máquina virtual Ubuntu y un disco de datos persistente en Microsoft Azure. Incluye los programas utilizados, las evidencias de las pruebas y una guía para la sustentación.
+Implementación y evidencias de cuatro componentes técnicos de una práctica de Azure Virtual Machines: Ubuntu, almacenamiento persistente, uso de una plantilla del catálogo y Windows con RDP.
 
-**Última validación documentada: 22 de septiembre de 2026.** Al finalizar, la VM quedó detenida y desasignada (`VM deallocated`), con sus dos discos conservados. Este repositorio registra esa ejecución; no consulta el estado actual de Azure.
+**Empieza por la [guía completa para la sustentación](Guia-completa-sustentacion.md).** Incluye los comandos para el Mac, Ubuntu y Windows, resultados esperados y pasos para desasignar las máquinas al terminar.
 
-## Alcance
-
-| Parte de la práctica | Estado documentado |
+| Componente | Resultado |
 |---|---|
-| Crear Ubuntu y conectarse por SSH | Completada |
-| Añadir y montar un disco; probar persistencia tras reiniciar | Completada |
-| Elegir una plantilla del catálogo de Azure y crear una VM desde ella | Pendiente |
-| Crear Windows y conectarse por RDP | Pendiente |
+| Ubuntu y SSH | VM creada y conexión comprobada |
+| Disco adicional | 32 GiB, ext4 en `/datos`, persistencia y SHA256 verificados tras reinicio |
+| Plantilla del catálogo | Plantilla oficial seleccionada y documentada; VM independiente creada y acceso SSH comprobado |
+| Windows y RDP | Windows Server 2022 creado; escritorio remoto y sesión interactiva comprobados |
 
-Se utilizó una definición ARM propia para crear Ubuntu. Esto no sustituye el ejercicio de seleccionar y explicar una plantilla del catálogo. No se afirma haber reproducido todos los detalles del video del curso ni haber presentado la práctica al docente.
+## Documentación
 
-## Material
+- [Guía completa y comandos para la demostración](Guia-completa-sustentacion.md).
+- [Ubuntu, disco adicional y prueba de persistencia](Resumen-y-sustentacion.md).
+- [Plantilla seleccionada, recursos y cambios](Plantilla-del-catalogo.md).
+- [Windows, red y conexión RDP](Windows-y-RDP.md).
+- [Criterios de publicación de las evidencias](evidencias/README.md).
+- [Enunciado del curso](referencias/2025-03%20Practica%20IaaS.pdf) y [guía de regiones](referencias/guia-regiones-azure.pdf).
 
-- [Resumen y guion de sustentación](Resumen-y-sustentacion.md).
-- [Evidencias y criterios de publicación](evidencias/README.md).
-- [Instrucciones del curso](referencias/2025-03%20Practica%20IaaS.pdf).
-- [Guía de regiones](referencias/guia-regiones-azure.pdf).
-- [Consulta histórica de tamaños disponibles](disponibilidad-vm.json).
+## Recursos
 
-## Configuración verificada
+| VM | Región | Tamaño | Discos |
+|---|---|---|---|
+| `vm-ubuntu-iaas` | `chilecentral` | B2als_v2, 2 CPU, 4 GiB | Dos de 32 GiB |
+| `vm-plantilla-iaas` | `chilecentral` | B2als_v2, 2 CPU, 4 GiB | Uno de 32 GiB |
+| `vm-win-iaas` | `northcentralus` | B2als_v2, 2 CPU, 4 GiB | Uno de 32 GiB |
 
-| Recurso | Configuración |
-|---|---|
-| Suscripción | Azure for Students |
-| Grupo / VM | `rg-practica-iaas` / `vm-ubuntu-iaas` |
-| Región | `chilecentral` |
-| Ubuntu | 22.04 LTS, x64, generación 2 |
-| Tamaño | `Standard_B2als_v2`: 2 vCPU, 4 GiB |
-| Seguridad | Trusted Launch, arranque seguro y TPM virtual |
-| Almacenamiento | Dos discos Standard HDD LRS de 32 GiB cada uno |
-| Disco adicional | `disco-datos-iaas`, LUN 0, ext4, montado en `/datos` |
-| Acceso | Clave SSH, puerto 22 limitado a una IP de origen `/32` |
+Al finalizar las validaciones las tres VM quedaron desasignadas y sus discos conservados. Las evidencias son observaciones de esa ejecución, no un panel de estado actual. Iniciar una VM vuelve a consumir cómputo; los discos y las IP públicas conservados pueden generar cargos incluso con las VM desasignadas.
 
-La prueba de persistencia verificó el montaje automático por UUID y las sumas SHA256 de ambos archivos después de un reinicio real. También se comprobó la integridad de un respaldo local.
+## Usar una copia clonada
 
-## Usar los programas
-
-Requisitos: Python 3, Azure CLI, OpenSSH y `curl`, en macOS o Linux. No se necesitan paquetes adicionales de Python. Los programas están preparados para la configuración concreta de esta práctica y la política de regiones de Azure for Students.
-
-Autentícate y revisa las suscripciones disponibles:
-
-```bash
-az login
-az account list --query '[].{nombre:name,id:id,estado:state}' -o table
-```
-
-Selecciona el identificador correcto en tu terminal. Sustituye el texto de ejemplo por el ID de tu propia suscripción:
+Requisitos: Python 3, Azure CLI, OpenSSH y `curl`; Windows App para la parte de RDP en macOS. Autentícate con `az login` y define en tu terminal:
 
 ```bash
 export AZURE_SUBSCRIPTION_ID='ID_DE_TU_SUSCRIPCION'
 ```
 
-Si utilizas una carpeta de configuración de Azure CLI distinta de la habitual, define `AZURE_CONFIG_DIR` antes de autenticarte. Ninguna ruta personal ni credencial está incorporada a estos programas.
+Si ya utilizas una carpeta propia para la sesión de Azure CLI, define `AZURE_CONFIG_DIR` antes de autenticarte. Para operar las VM existentes necesitas los archivos de acceso originales en tu carpeta local `privado/`; una copia de GitHub no incluye claves, contraseñas, archivos RDP ni respaldos. Los programas publicados requieren una suscripción explícita y escriben las nuevas evidencias en `resultados-locales/`, carpeta excluida de Git.
 
-### Trabajar con la VM ya creada
+La guía con rutas locales corresponde al Mac donde se realizó la práctica. En otra copia, entra primero en la raíz del repositorio y configura la suscripción y los archivos privados antes de ejecutar los comandos.
 
-Para conectarte necesitas los archivos originales de tu equipo en la carpeta local `privado/`: `iaas_ubuntu_rsa`, `iaas_ubuntu_rsa.pub` y `known_hosts`. Estos archivos se conservaron localmente y no se subieron a GitHub. No generes otra clave para intentar acceder a la VM existente.
+## Despliegue y validación
 
-Desde la raíz del repositorio, inicia la VM y actualiza la regla SSH para tu conexión:
+Los programas `crear_ubuntu.py`, `desplegar_extra.py`, `validar_y_detener.py`, `validar_plantilla.py`, `preparar_windows_rdp.py` y `comprobar_sesion_rdp.py` documentan la automatización empleada. No es necesario volver a crear los recursos para sustentarlos: usa `controlar_vm.py` y `controlar_extra.py`.
 
-```bash
-python3 scripts/controlar_vm.py iniciar
-```
+`validar_y_detener.py` prepara y formatea un disco adicional nuevo tras comprobar que esté vacío; se detiene si detecta particiones o firmas previas. Está destinado a la creación inicial, no a repetir una demostración sobre el disco existente.
 
-El programa imprime el comando SSH para entrar. Para terminar, sal de SSH con `exit` y desasigna la VM desde tu terminal local:
+La plantilla oficial original se conserva junto con su licencia. La copia adaptada y su procedencia están en `plantillas/`. La definición ARM de Windows es propia y está separada del ejercicio de seleccionar una plantilla del catálogo.
 
-```bash
-python3 scripts/controlar_vm.py detener
-```
+## Alcance académico
 
-El resultado esperado es `Confirmado: VM desasignada`. No hay apagado programado configurado para esta ejecución. Al iniciar la VM vuelve a consumirse cómputo; la desasignación conserva los discos y la IP, que pueden seguir generando cargos.
-
-### Reproducir el despliegue en un entorno nuevo
-
-Estos pasos crean recursos y consumen crédito. No son necesarios para mostrar la VM que ya existe. La creación comprueba que no haya una VM previa en el grupo.
-
-```bash
-python3 scripts/crear_ubuntu.py
-python3 scripts/validar_y_detener.py
-```
-
-El segundo programa **formatea el disco adicional nuevo** después de comprobar LUN 0, tamaño de 32 GiB y ausencia de particiones, firmas y montajes. Se detiene si el disco ya tiene datos o particiones. Después prueba el montaje y la persistencia, guarda un respaldo local e intenta desasignar la VM incluso si falla una prueba. Si el proceso se interrumpe o pierde conexión, confirma el estado y ejecuta `controlar_vm.py detener`.
-
-`conectar_disco_y_arrancar.py` es un auxiliar de recuperación para una VM desasignada que todavía no tiene discos de datos. No forma parte de la secuencia normal anterior.
-
-Las nuevas evidencias se guardan en `resultados-locales/evidencias/`, excluida de Git porque puede contener IP e identificadores reales. Los archivos de `evidencias/` corresponden a la ejecución documentada y tienen esos datos ocultos.
-
-### Regenerar el documento
-
-```bash
-python3 scripts/generar_resumen.py
-```
-
-Este comando reconstruye el resumen a partir de las evidencias históricas publicadas y no consulta ni modifica Azure.
-
-## Publicación y datos locales
-
-Las claves SSH, los archivos de autenticación, la plantilla expandida con datos reales y el respaldo de pruebas permanecen únicamente en el equipo original. Las evidencias publicadas conservan los resultados técnicos, con marcadores donde se ocultaron identificadores y direcciones. Consulta [la nota de evidencias](evidencias/README.md).
+Se comprobaron los objetivos técnicos descritos arriba. No se afirma haber reproducido cada detalle del video original del curso ni haber presentado o entregado la práctica ante el docente. El repositorio reúne lo implementado, la explicación y las evidencias para preparar esa sustentación.

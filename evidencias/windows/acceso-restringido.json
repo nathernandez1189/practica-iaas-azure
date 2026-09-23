@@ -1,0 +1,25 @@
+{
+  "access": "Allow",
+  "destinationAddressPrefix": "*",
+  "destinationAddressPrefixes": [],
+  "destinationPortRange": "3389",
+  "destinationPortRanges": [],
+  "direction": "Inbound",
+  "etag": "<REDACTED>",
+  "id": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-windows/providers/Microsoft.Network/networkSecurityGroups/nsg-windows-iaas/securityRules/RDP-desde-mi-conexion",
+  "name": "RDP-desde-mi-conexion",
+  "priority": 1000,
+  "protocol": "Tcp",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "rg-iaas-windows",
+  "sourceAddressPrefixes": [
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32",
+    "<PUBLIC_IP>/32"
+  ],
+  "sourcePortRange": "*",
+  "sourcePortRanges": [],
+  "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "managedBy": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/rg-iaas-windows/providers/Microsoft.Compute/virtualMachines/vm-win-iaas",
+    "name": "disco-so-windows-iaas",
+    "provisioningState": "Succeeded",
+    "sizeGB": 32,
+    "sku": "Standard_LRS",
+    "state": "Reserved"
+  }
+]

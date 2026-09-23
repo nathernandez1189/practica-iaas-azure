@@ -11,6 +11,7 @@ config.local.json
 *_rsa
 *_rsa.pub
 known_hosts
+*.rdp
 
 # Nuevas evidencias pueden contener identificadores y direcciones reales
 resultados-locales/

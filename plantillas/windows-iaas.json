@@ -1,0 +1,199 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "type": "string"
+    },
+    "adminUsername": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "vmSize": {
+      "type": "string"
+    },
+    "sourceAddressPrefix": {
+      "type": "string"
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "minLength": 12
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2023-09-01",
+      "name": "nsg-windows-iaas",
+      "location": "[parameters('location')]",
+      "tags": {
+        "practica": "iaas",
+        "parte": "windows"
+      },
+      "properties": {
+        "securityRules": [
+          {
+            "name": "RDP-desde-mi-conexion",
+            "properties": {
+              "priority": 1000,
+              "protocol": "Tcp",
+              "access": "Allow",
+              "direction": "Inbound",
+              "sourceAddressPrefix": "[parameters('sourceAddressPrefix')]",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*",
+              "destinationPortRange": "3389"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-09-01",
+      "name": "vnet-windows-iaas",
+      "location": "[parameters('location')]",
+      "tags": {
+        "practica": "iaas",
+        "parte": "windows"
+      },
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.44.0.0/16"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "subnet-iaas",
+            "properties": {
+              "addressPrefix": "10.44.1.0/24"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-09-01",
+      "name": "ip-windows-iaas",
+      "location": "[parameters('location')]",
+      "tags": {
+        "practica": "iaas",
+        "parte": "windows"
+      },
+      "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+      },
+      "properties": {
+        "publicIPAllocationMethod": "Static",
+        "publicIPAddressVersion": "IPv4"
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2023-09-01",
+      "name": "nic-windows-iaas",
+      "location": "[parameters('location')]",
+      "tags": {
+        "practica": "iaas",
+        "parte": "windows"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', 'nsg-windows-iaas')]",
+        "[resourceId('Microsoft.Network/virtualNetworks', 'vnet-windows-iaas')]",
+        "[resourceId('Microsoft.Network/publicIPAddresses', 'ip-windows-iaas')]"
+      ],
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'nsg-windows-iaas')]"
+        },
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAllocationMethod": "Dynamic",
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnet-windows-iaas', 'subnet-iaas')]"
+              },
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'ip-windows-iaas')]"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2024-07-01",
+      "name": "[parameters('vmName')]",
+      "location": "[parameters('location')]",
+      "tags": {
+        "practica": "iaas",
+        "parte": "windows"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', 'nic-windows-iaas')]"
+      ],
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "[parameters('vmSize')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2022-datacenter-smalldisk-g2",
+            "version": "20348.5622.260906"
+          },
+          "osDisk": {
+            "name": "disco-so-windows-iaas",
+            "createOption": "FromImage",
+            "diskSizeGB": 32,
+            "caching": "ReadWrite",
+            "managedDisk": {
+              "storageAccountType": "Standard_LRS"
+            },
+            "deleteOption": "Detach"
+          }
+        },
+        "osProfile": {
+          "computerName": "[parameters('vmName')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          }
+        },
+        "securityProfile": {
+          "securityType": "TrustedLaunch",
+          "uefiSettings": {
+            "secureBootEnabled": true,
+            "vTpmEnabled": true
+          }
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', 'nic-windows-iaas')]",
+              "properties": {
+                "primary": true,
+                "deleteOption": "Detach"
+              }
+            }
+          ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  ]
+}

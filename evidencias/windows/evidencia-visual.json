@@ -1,0 +1,7 @@
+{
+  "cliente": "Windows App para macOS",
+  "versionCliente": "11.4.1",
+  "observacion": "Escritorio Windows visible. PowerShell mostró hostname=vm-win-iaas, whoami=vm-win-iaas\\azureuser y qwinsta con rdp-tcp#0 Active.",
+  "captura": "Conservada únicamente en privado/windows/escritorio-rdp.png porque la barra de título muestra la dirección pública.",
+  "credenciales": "No incluidas en la captura ni en las evidencias publicables."
+}

@@ -1,0 +1,16 @@
+{
+  "value": [
+    {
+      "code": "ComponentStatus/StdOut/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "{\n    \"Name\":  \"azureuser\",\n    \"Domain\":  \"vm-win-iaas\",\n    \"Disabled\":  false,\n    \"Lockout\":  false,\n    \"PasswordRequired\":  true\n}\n{\n    \"Name\":  \"azureuser\",\n    \"Enabled\":  true,\n    \"PasswordLastSet\":  \"\\/Date(1790123389675)\\/\"\n}"
+    },
+    {
+      "code": "ComponentStatus/StdErr/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": ""
+    }
+  ]
+}

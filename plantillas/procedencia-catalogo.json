@@ -1,0 +1,15 @@
+{
+  "catalogo": "https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vm-simple-linux/",
+  "repositorio": "https://github.com/Azure/azure-quickstart-templates",
+  "revision": "39628293ee6cc2833293c09ff1a19129916dedb6",
+  "archivo": "quickstarts/microsoft.compute/vm-simple-linux/azuredeploy.json",
+  "sha256Original": "1fd87a12d53d5a011637a7667067e7dc6f8777cb5f5ff7dbfae348f2cbfa7b33",
+  "cambios": [
+    "IP pública Standard estática en lugar de Basic dinámica",
+    "SSH limitado a un parámetro de IP /32",
+    "Disco del sistema explícito de 32 GiB, conservado al eliminar VM",
+    "Contraseña nula cuando se usa clave SSH",
+    "Etiquetas para identificar la práctica"
+  ],
+  "sha256Adaptada": "195645317a483ee741ee8571fade0e3d1baad1a5a2a2d5e5281b9a400f1dcdbd"
+}

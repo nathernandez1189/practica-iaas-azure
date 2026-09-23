@@ -1,0 +1,14 @@
+{
+  "region": "chilecentral",
+  "fuente": "https://prices.azure.com/api/retail/prices",
+  "items": [
+    {
+      "productName": "Standard HDD Managed Disks",
+      "skuName": "S4 LRS",
+      "meterName": "S4 LRS Disk",
+      "retailPrice": 2.1504,
+      "unitOfMeasure": "1/Month",
+      "currencyCode": "USD"
+    }
+  ]
+}
