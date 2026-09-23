@@ -137,6 +137,10 @@ Se comprobaron los cuatro componentes técnicos. No se afirma haber reproducido 
 - [Consulta de tarifas oficiales](https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices).
 '''
 
-path = BASE / 'Resumen-y-sustentacion.md'
+path = BASE / 'resultados-locales' / 'Resumen-y-sustentacion.md'
+path.parent.mkdir(parents=True, exist_ok=True)
+body = body.replace('](evidencias/', '](../evidencias/')
+for name in ('README.md', 'Guia-completa-sustentacion.md', 'Plantilla-del-catalogo.md', 'Windows-y-RDP.md'):
+    body = body.replace('](' + name + ')', '](../' + name + ')')
 path.write_text(body)
 print(path)

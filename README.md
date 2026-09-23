@@ -14,7 +14,7 @@ Implementación y evidencias de cuatro componentes técnicos de una práctica de
 ## Documentación
 
 - [Guía completa y comandos para la demostración](Guia-completa-sustentacion.md).
-- [Ubuntu, disco adicional y prueba de persistencia](Resumen-y-sustentacion.md).
+- [Ubuntu y persistencia: evidencia del reinicio](evidencias/08-persistencia-tras-reinicio.txt).
 - [Plantilla seleccionada, recursos y cambios](Plantilla-del-catalogo.md).
 - [Windows, red y conexión RDP](Windows-y-RDP.md).
 - [Criterios de publicación de las evidencias](evidencias/README.md).
