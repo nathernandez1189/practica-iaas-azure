@@ -32,7 +32,11 @@ whoami
 qwinsta
 ```
 
-Los resultados mostraron `vm-win-iaas`, `vm-win-iaas\azureuser` y una sesión `rdp-tcp#0` en estado `Active`. Se guardó una captura local; queda fuera de GitHub porque el título de la ventana contiene la dirección pública del equipo.
+Los resultados mostraron `vm-win-iaas`, `vm-win-iaas\azureuser` y una sesión `rdp-tcp#0` en estado `Active`. La captura inicial de PowerShell permanece privada porque el título de la ventana muestra la IP pública. Se conserva también una captura posterior de Server Manager cuyo título no contiene esa dirección y que se publica sin modificar:
+
+![Escritorio Windows Server visible mediante Windows App](evidencias/capturas/windows-server-manager.jpg)
+
+La imagen pertenece a la validación del 23/09/2026 UTC. Ver su [procedencia y SHA256](evidencias/capturas/README.md). La captura se complementa con el [registro posterior de sesión](evidencias/verificacion-2026-09-23/windows-sesion.json), que documenta un nuevo inicio de sesión y `rdp-tcp#1` en estado `Active`.
 
 También se consultó el registro de Windows para verificar un inicio de sesión remoto interactivo, evento de seguridad **4624 con tipo de inicio 10**, y se conservó el registro de Terminal Services. Esta verificación distingue una conexión real de una simple comprobación de que el puerto está abierto.
 
@@ -49,9 +53,9 @@ También se consultó el registro de Windows para verificar un inicio de sesión
 
 Después de validar la conexión se desasignó la VM y se conservó su disco. Los estados de los archivos son observaciones de esa ejecución; para consultar el estado actual usa `controlar_extra.py windows estado`.
 
-## Explicación para la sustentación
+## Interpretación de la prueba
 
-Desplegué Windows Server con escritorio gráfico y me conecté desde el Mac usando Windows App y el protocolo RDP. La VM exige usuario y contraseña y mantiene autenticación de nivel de red. Restringí el puerto 3389 a las direcciones observadas de mi conexión. Mostré el equipo y la sesión activa desde PowerShell y contrasté la conexión con el registro de Windows. Al terminar desasigné la VM para detener el consumo de cómputo y conservar el sistema instalado.
+La combinación de escritorio visible, identidad del equipo, sesión activa y evento de inicio remoto distingue una conexión autenticada de una simple comprobación del servicio. Los resultados se refieren a esas ejecuciones; no garantizan que una conexión futura sea posible sin comprobar la VM, la red y las credenciales. El cierre conservó el sistema instalado en su disco administrado.
 
 ## Referencias
 

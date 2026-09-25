@@ -21,3 +21,8 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .venv/
+
+# Material de exposición: permanece fuera de la documentación técnica
+*[Ss]ustentacion*
+*[Ss]ustentación*
+presentaciones/

@@ -1,0 +1,57 @@
+{
+  "fechaUtc": "2026-09-23T02:25:05.784628+00:00",
+  "maquinas": [
+    {
+      "nombre": "vm-ubuntu-iaas",
+      "grupo": "rg-practica-iaas",
+      "estado": "VM deallocated",
+      "provision": "Succeeded",
+      "discos": [
+        {
+          "nombre": "disco-datos-iaas",
+          "gb": 32,
+          "tipo": "Standard_LRS",
+          "estado": "Reserved",
+          "provision": "Succeeded"
+        },
+        {
+          "nombre": "disco-so-ubuntu-iaas",
+          "gb": 32,
+          "tipo": "Standard_LRS",
+          "estado": "Reserved",
+          "provision": "Succeeded"
+        }
+      ]
+    },
+    {
+      "nombre": "vm-plantilla-iaas",
+      "grupo": "rg-iaas-plantilla",
+      "estado": "VM deallocated",
+      "provision": "Succeeded",
+      "discos": [
+        {
+          "nombre": "vm-plantilla-iaas_OsDisk_1_a2634bccf0044d489416a7269bdbaf33",
+          "gb": 32,
+          "tipo": "Standard_LRS",
+          "estado": "Reserved",
+          "provision": "Succeeded"
+        }
+      ]
+    },
+    {
+      "nombre": "vm-win-iaas",
+      "grupo": "rg-iaas-windows",
+      "estado": "VM deallocated",
+      "provision": "Succeeded",
+      "discos": [
+        {
+          "nombre": "disco-so-windows-iaas",
+          "gb": 32,
+          "tipo": "Standard_LRS",
+          "estado": "Reserved",
+          "provision": "Succeeded"
+        }
+      ]
+    }
+  ]
+}

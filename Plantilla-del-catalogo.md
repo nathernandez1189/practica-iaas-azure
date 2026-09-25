@@ -47,6 +47,8 @@ La plantilla se validó y el despliegue terminó correctamente. Una conexión SS
 
 Estos archivos registran una ejecución; no son una consulta en tiempo real de Azure. Las IP, claves e identificadores sensibles están ocultos en las copias publicables.
 
-## Explicación para la sustentación
+## Resultado técnico
 
-Elegí una plantilla del catálogo oficial porque define los recursos y sus relaciones de forma declarativa. Revisé sus parámetros, adapté la red y el almacenamiento a esta suscripción y desplegué una VM independiente. Comprobé por SSH que el sistema creado era Ubuntu y que sus recursos coincidían con los parámetros. La ventaja es poder revisar y repetir la definición de infraestructura, controlando las diferencias entre despliegues.
+La plantilla permite revisar la infraestructura como una definición declarativa. La imagen determina el sistema operativo inicial; la plantilla define recursos, parámetros y dependencias. El JSON original, la adaptación y sus hashes permiten identificar qué versión se utilizó y qué cambió.
+
+La [verificación posterior](evidencias/verificacion-2026-09-23/plantilla-ssh.txt) confirmó acceso a la segunda Ubuntu; el [registro de despliegues](evidencias/verificacion-2026-09-23/plantilla-despliegues.json) conserva `Succeeded`. La [guía técnica](Guia-tecnica.md) describe cómo preparar y operar esta VM.

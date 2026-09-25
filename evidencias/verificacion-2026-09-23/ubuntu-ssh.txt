@@ -1,0 +1,35 @@
+vm-ubuntu-iaas
+azureuser
+Ubuntu 22.04.5 LTS
+2
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       240Mi       3.2Gi       3.0Mi       321Mi       3.3Gi
+Swap:             0B          0B          0B
+active
+63bc457f-f7bd-448e-b95c-2c32e7286ecd
+NAME      SIZE FSTYPE   MOUNTPOINTS
+loop0      74M squashfs /snap/core22/2411
+loop1   115.3M squashfs /snap/lxd/40338
+loop2    50.1M squashfs /snap/snapd/27591
+sda        32G          
+├─sda1   31.9G ext4     /
+├─sda14     4M          
+└─sda15   106M vfat     /boot/efi
+sdb        32G          
+└─sdb1     32G ext4     /datos
+TARGET SOURCE    FSTYPE OPTIONS
+/datos /dev/sdb1 ext4   rw,relatime
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sdb1      ext4   32G  1.1M   30G   1% /datos
+TARGET SOURCE                                    FSTYPE OPTIONS
+/datos UUID=ef492f4a-1423-404e-98e1-6cc1392162b1 ext4   defaults,nofail
+UUID=ef492f4a-1423-404e-98e1-6cc1392162b1 /datos ext4 defaults,nofail 0 2
+Práctica IaaS: disco administrado adicional de 32 GiB.
+Montaje persistente: /datos.
+Creado el: 2026-09-22T23:36:25+00:00
+prueba-iaas.txt: OK
+prueba-persistencia.bin: OK
+LECTURA_ESCRITURA_OK
+VALIDACION_SSH_OK
+
+

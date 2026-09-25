@@ -1,0 +1,13 @@
+{
+  "descripcion": "SHA256 de las copias publicables incorporadas, sin modificar los registros de origen ya anonimizados.",
+  "archivos": {
+    "ubuntu-ssh.txt": "47338c972f1a70f4d83f55b4a96975984ef7ab8b36019587c831e4af4a382925",
+    "plantilla-ssh.txt": "83ef56fb57fd7dcd9ecfa0effde037412058c1b3f0fd3b3b4685ae4033e90c13",
+    "plantilla-despliegues.json": "acc4036f1eea5768836749f6f5df8fa4e0169faf8f477dd71ce89680eb416b4f",
+    "windows-sistema.json": "2f4315967bd997169fed61ff576ccb2f30de08dcfc42415a747de2d95baa0e07",
+    "windows-sesion.json": "c8173918bbc1eeb2269c58430a7eb22f5e25ca491263051ac80add0e7c282fcd",
+    "estado-final.json": "cf42084588d59c0258f70abd58b677b6796d739d2fd4635216e60dae951ac8d5",
+    "reglas-acceso.json": "5e6186e312b095664f5a6f7faa448fbd7dddc2039aba674e882001b591764129",
+    "linux-resumen.json": "73a7c5e35c11388a84a1f3f6e86fd884067af2d359793939b17d4e724d9d81f9"
+  }
+}

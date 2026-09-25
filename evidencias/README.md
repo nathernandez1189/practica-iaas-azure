@@ -36,4 +36,14 @@ Las carpetas `plantilla/` y `windows/` contienen el despliegue, la conexión y l
 - [Windows: registro RDP](windows/sesion-rdp.json).
 - [Windows: evidencia visual local](windows/evidencia-visual.json).
 
-Las nuevas copias utilizan también el marcador `<PUBLIC_IP>`. La captura de escritorio queda únicamente en el equipo original porque la barra de título contiene la IP de conexión. Ningún archivo RDP ni credencial se publica.
+Las nuevas copias utilizan también el marcador `<PUBLIC_IP>`. La primera captura con PowerShell permanece en el equipo original porque su barra de título contiene la IP de conexión. Se incorporó otra captura original de Server Manager, cuya ventana utiliza el nombre de la conexión y no expone esa dirección. Ningún archivo RDP ni credencial se publica.
+
+## Verificación posterior y evidencia visual
+
+- [Registros del 23/09/2026 UTC](verificacion-2026-09-23/README.md): SSH a ambas Ubuntu, despliegue de la plantilla, sistema y sesión Windows, reglas de red y cierre de los tres recursos.
+- [Captura original de Server Manager](capturas/README.md): imagen sin alteraciones y manifiesto SHA256.
+- [Diagramas explicativos](../docs/figuras/README.md): arquitectura y persistencia ilustradas a partir de los registros; no son capturas.
+
+Las fechas UTC de esta verificación corresponden a la noche del 22 de septiembre en Colombia. Se conservan tanto el intento de actualización de red que agotó su tiempo de espera como la posterior validación satisfactoria.
+
+Desde la raíz del repositorio se puede ejecutar `python3 scripts/verificar_evidencias.py`. Comprueba la coherencia e integridad de archivos locales; no consulta Azure ni constituye una nueva prueba de infraestructura.

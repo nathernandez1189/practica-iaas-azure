@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="740" viewBox="0 0 1080 740" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura de la práctica IaaS en Azure</title>
+  <desc id="desc">Tres máquinas independientes, cada una con su propia red. Dos Ubuntu en Chile Central con SSH y una Windows en North Central US con RDP. Cuatro discos de 32 GiB.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#496b92"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17304c; }
+      .mono { font-family: monospace; font-size: 15px; }
+      .small { font-size: 16px; fill: #47617a; }
+      .label { font-size: 13px; letter-spacing: 1.4px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .line { fill: none; stroke: #496b92; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1080" height="740" rx="20" fill="#f3f7fb"/>
+  <text x="36" y="42" class="label" fill="#0067b1">AZURE VIRTUAL MACHINES · LABORATORIO</text>
+  <text x="36" y="82" font-size="32" font-weight="700">Tres VM, cuatro discos, acceso controlado</text>
+  <text x="36" y="113" class="small">Configuración documentada · septiembre de 2026 · diagrama explicativo</text>
+  <rect x="345" y="142" width="390" height="72" rx="14" fill="#16334f"/>
+  <text x="540" y="171" text-anchor="middle" font-size="20" font-weight="700" style="fill:white">Equipo administrador · macOS</text>
+  <text x="540" y="195" text-anchor="middle" font-size="16" style="fill:#d9e8f5">Terminal / SSH · Windows App / RDP</text>
+  <path d="M455 214V236H196V276" class="line"/>
+  <path d="M540 214V276" class="line"/>
+  <path d="M625 214V236H884V276" class="line"/>
+  <rect x="141" y="246" width="110" height="24" rx="8" fill="#f3f7fb"/>
+  <rect x="485" y="246" width="110" height="24" rx="8" fill="#f3f7fb"/>
+  <rect x="829" y="246" width="110" height="24" rx="8" fill="#f3f7fb"/>
+  <text x="196" y="263" text-anchor="middle" class="small">SSH · 22</text>
+  <text x="540" y="263" text-anchor="middle" class="small">SSH · 22</text>
+  <text x="884" y="263" text-anchor="middle" class="small">RDP · 3389</text>
+  <rect x="32" y="282" width="328" height="358" rx="16" fill="white" stroke="#cddce9"/>
+  <rect x="376" y="282" width="328" height="358" rx="16" fill="white" stroke="#cddce9"/>
+  <rect x="720" y="282" width="328" height="358" rx="16" fill="white" stroke="#cddce9"/>
+  <rect x="52" y="304" width="147" height="27" rx="7" fill="#e8f3fa"/>
+  <rect x="396" y="304" width="147" height="27" rx="7" fill="#e8f3fa"/>
+  <rect x="740" y="304" width="197" height="27" rx="7" fill="#e8f3fa"/>
+  <text x="63" y="323" class="small">CHILE CENTRAL</text>
+  <text x="407" y="323" class="small">CHILE CENTRAL</text>
+  <text x="751" y="323" class="small">NORTH CENTRAL US</text>
+  <text x="52" y="365" font-size="25" font-weight="700">Ubuntu + datos</text>
+  <text x="396" y="365" font-size="25" font-weight="700">Ubuntu por plantilla</text>
+  <text x="740" y="365" font-size="25" font-weight="700">Windows Server</text>
+  <text x="52" y="395" class="mono">vm-ubuntu-iaas</text>
+  <text x="396" y="395" class="mono">vm-plantilla-iaas</text>
+  <text x="740" y="395" class="mono">vm-win-iaas</text>
+  <text x="52" y="421" class="small">Ubuntu 22.04 LTS</text>
+  <text x="396" y="421" class="small">Ubuntu 22.04 LTS · x64</text>
+  <text x="740" y="421" class="small">Server 2022 Datacenter</text>
+  <path d="M52 441H340M396 441H684M740 441H1028" stroke="#e1eaf2"/>
+  <text x="52" y="468" class="body">Red propia · NIC · IP pública</text>
+  <text x="396" y="468" class="body">Red propia · NIC · IP pública</text>
+  <text x="740" y="468" class="body">Red propia · NIC · IP pública</text>
+  <text x="52" y="495" class="small">NSG · orígenes /32 autorizados</text>
+  <text x="396" y="495" class="small">NSG · orígenes /32 autorizados</text>
+  <text x="740" y="495" class="small">NSG · orígenes /32 autorizados</text>
+  <rect x="52" y="520" width="288" height="64" rx="9" fill="#eaf7f2"/>
+  <rect x="396" y="520" width="288" height="64" rx="9" fill="#eaf7f2"/>
+  <rect x="740" y="520" width="288" height="64" rx="9" fill="#eaf7f2"/>
+  <text x="66" y="545" class="body" font-weight="700">Sistema: 32 GiB</text>
+  <text x="66" y="570" class="small">Datos: 32 GiB · ext4 · /datos</text>
+  <text x="410" y="545" class="body" font-weight="700">Sistema: 32 GiB</text>
+  <text x="410" y="570" class="small">Plantilla ARM del catálogo</text>
+  <text x="754" y="545" class="body" font-weight="700">Sistema: 32 GiB</text>
+  <text x="754" y="570" class="small">Sesión gráfica · NLA activada</text>
+  <text x="52" y="615" class="mono">rg-practica-iaas</text>
+  <text x="396" y="615" class="mono">rg-iaas-plantilla</text>
+  <text x="740" y="615" class="mono">rg-iaas-windows</text>
+  <text x="36" y="679" class="body" font-weight="700">En cada VM: Standard_B2als_v2 · 2 vCPU · 4 GiB de RAM</text>
+  <text x="36" y="711" class="small">Discos Standard HDD LRS · VM independientes, sin enlaces configurados entre ellas.</text>
+</svg>

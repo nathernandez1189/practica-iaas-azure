@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="590" viewBox="0 0 1080 590" role="img" aria-labelledby="title desc">
+  <title id="title">Persistencia del disco de datos después del reinicio</title>
+  <desc id="desc">El dispositivo cambia de sdb1 a sda1. El UUID y la carpeta datos se mantienen. Cambia el identificador de arranque y los dos archivos superan la comprobación SHA256.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#496b92"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17304c; }
+      .small { font-size: 17px; fill: #47617a; }
+      .mono { font-family: monospace; font-size: 22px; }
+      .label { font-size: 13px; font-weight: 700; letter-spacing: 1.4px; }
+    </style>
+  </defs>
+  <rect width="1080" height="590" rx="20" fill="#f3f7fb"/>
+  <text x="36" y="40" class="label">ALMACENAMIENTO PERSISTENTE · /datos</text>
+  <text x="36" y="81" font-size="32" font-weight="700">Cambió el dispositivo. El montaje se conservó.</text>
+  <text x="36" y="114" class="small">Comparación de registros reales · figura explicativa, no captura de terminal</text>
+  <rect x="36" y="151" width="448" height="225" rx="16" fill="white" stroke="#cddce9"/>
+  <rect x="596" y="151" width="448" height="225" rx="16" fill="white" stroke="#cddce9"/>
+  <text x="60" y="186" class="label">01 · ANTES DEL REINICIO</text>
+  <text x="620" y="186" class="label">02 · DESPUÉS DEL REINICIO</text>
+  <text x="60" y="229" class="mono">/dev/sdb1 → /datos</text>
+  <text x="620" y="229" class="mono">/dev/sda1 → /datos</text>
+  <text x="60" y="263" class="small">32 GiB · ext4 · lectura y escritura</text>
+  <text x="620" y="263" class="small">32 GiB · ext4 · montaje automático</text>
+  <path d="M495 244H584" stroke="#496b92" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="540" y="226" text-anchor="middle" font-size="14">reinicio</text>
+  <text x="60" y="308" class="small">Identificador de arranque</text>
+  <text x="620" y="308" class="small">Identificador de arranque</text>
+  <text x="60" y="343" class="mono">b9d6c39f…</text>
+  <text x="620" y="343" class="mono">9e8bbc42…</text>
+  <rect x="36" y="398" width="1008" height="86" rx="12" fill="#16334f"/>
+  <text x="60" y="430" font-size="18" font-weight="700" style="fill:white">La referencia estable en /etc/fstab es el UUID</text>
+  <text x="60" y="461" font-family="monospace" font-size="20" style="fill:#d9e8f5">ef492f4a-1423-404e-98e1-6cc1392162b1 · /datos · ext4 · nofail</text>
+  <circle cx="50" cy="521" r="10" fill="#168260"/>
+  <text x="70" y="527" font-size="19" font-weight="700">SHA256: prueba-iaas.txt OK · prueba-persistencia.bin OK</text>
+  <text x="36" y="563" class="small">Fuentes: 07-montaje-disco.txt y 08-persistencia-tras-reinicio.txt · ejecución del 22/09/2026</text>
+</svg>

@@ -1,0 +1,48 @@
+[
+  {
+    "grupo": "rg-practica-iaas",
+    "reglas": [
+      {
+        "regla": "SSH-desde-mi-conexion",
+        "puerto": "22",
+        "origenes": [
+          "<PUBLIC_IP>/32"
+        ],
+        "estado": "Succeeded"
+      }
+    ]
+  },
+  {
+    "grupo": "rg-iaas-plantilla",
+    "reglas": [
+      {
+        "regla": "SSH",
+        "puerto": "22",
+        "origenes": [
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32"
+        ],
+        "estado": "Succeeded"
+      }
+    ]
+  },
+  {
+    "grupo": "rg-iaas-windows",
+    "reglas": [
+      {
+        "regla": "RDP-desde-mi-conexion",
+        "puerto": "3389",
+        "origenes": [
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32",
+          "<PUBLIC_IP>/32"
+        ],
+        "estado": "Succeeded"
+      }
+    ]
+  }
+]

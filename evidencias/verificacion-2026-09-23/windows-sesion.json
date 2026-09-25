@@ -1,0 +1,16 @@
+{
+  "value": [
+    {
+      "code": "ComponentStatus/StdOut/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "{\n    \"fechaUtc\":  \"2026-09-23T02:22:53.1552195Z\",\n    \"rdpNuevoConfirmado\":  true,\n    \"iniciosSesion\":  [\n                          {\n                              \"fechaUtc\":  \"2026-09-23T02:22:09.2615829Z\",\n                              \"usuario\":  \"azureuser\",\n                              \"tipo\":  \"10\",\n                              \"ipOrigen\":  \"<PUBLIC_IP>\"\n                          }\n                      ],\n    \"sesiones\":  \" USERNAME              SESSIONNAME        ID  STATE   IDLE TIME  LOGON TIME\\r\\n azureuser             rdp-tcp#1           2  Active          .  9/23/2026 2:22 AM\\r\\n\"\n}"
+    },
+    {
+      "code": "ComponentStatus/StdErr/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": ""
+    }
+  ]
+}

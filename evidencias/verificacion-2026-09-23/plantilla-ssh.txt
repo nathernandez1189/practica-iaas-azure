@@ -1,0 +1,20 @@
+vm-plantilla-iaas
+azureuser
+Ubuntu 22.04.5 LTS
+2
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       264Mi       3.2Gi       3.0Mi       317Mi       3.3Gi
+Swap:             0B          0B          0B
+active
+a8249d2c-8ab9-4e2e-9622-d4f73772205e
+NAME      SIZE FSTYPE   MOUNTPOINTS
+loop0      74M squashfs /snap/core22/2411
+loop1   115.3M squashfs /snap/lxd/40338
+loop2    50.1M squashfs /snap/snapd/27591
+sda        32G          
+├─sda1   31.9G ext4     /
+├─sda14     4M          
+└─sda15   106M vfat     /boot/efi
+VALIDACION_SSH_OK
+
+

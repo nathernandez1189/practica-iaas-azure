@@ -1,0 +1,23 @@
+[
+  {
+    "parte": "plantilla",
+    "fechaUtc": "2026-09-23T02:09:13.390362+00:00",
+    "estado": "error",
+    "error": "Command '['az', 'network', 'nsg', 'rule', 'update', '-g', 'rg-iaas-plantilla', '--nsg-name', 'nsg-plantilla-iaas', '-n', 'SSH', '--source-address-prefixes', '<PUBLIC_IP>/32', '<PUBLIC_IP>/32', '<PUBLIC_IP>/32', '<PUBLIC_IP>/32', '--subscription', '<SUBSCRIPTION_ID>', '--only-show-errors', '-o', 'json']' timed out after 180 seconds",
+    "estadoFinal": "VM deallocated"
+  },
+  {
+    "parte": "ubuntu",
+    "fechaUtc": "2026-09-23T02:16:36.904606+00:00",
+    "estado": "correcto",
+    "estadoFinal": "VM deallocated"
+  },
+  {
+    "parte": "plantilla",
+    "fechaUtc": "2026-09-23T02:19:12.941392+00:00",
+    "plantillaHashes": "correctos",
+    "despliegueARM": "Succeeded",
+    "estado": "correcto",
+    "estadoFinal": "VM deallocated"
+  }
+]

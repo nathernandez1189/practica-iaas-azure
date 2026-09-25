@@ -1,0 +1,13 @@
+{
+  "archivo": "windows-server-manager.jpg",
+  "origen": "Captura local conservada de Windows App durante la validacion del 23/09/2026 UTC.",
+  "archivoOriginal": "verificacion-escritorio-2026-09-23.png",
+  "modificaciones": "Ninguna. Copia binaria identica al original; solo cambia el nombre del archivo publicado.",
+  "sha256": "681921bcad5ed5f5bd6cc517f286c12d092846a9115aeeafce5d83e9798d1f77",
+  "alcance": "Escritorio y Server Manager visibles; contrastar con los registros de sistema y sesion RDP.",
+  "fuentesComplementarias": [
+    "../verificacion-2026-09-23/windows-sistema.json",
+    "../verificacion-2026-09-23/windows-sesion.json"
+  ],
+  "formatoReal": "JPEG. El original llevaba extension .png; se corrigio solo la extension de la copia, conservando todos sus bytes."
+}
